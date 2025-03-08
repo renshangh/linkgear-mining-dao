@@ -19,7 +19,7 @@ import {
 } from "@provablehq/sdk";
 import * as receipt from "./transitions/sample_program_2025_03";
 
-export class Sample_programContract extends BaseContract {
+export class Sample_program_2025_03Contract extends BaseContract {
 
   constructor(config: Partial < ContractConfig > = {
     mode: ExecutionMode.LeoRun

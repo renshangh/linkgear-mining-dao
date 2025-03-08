@@ -28,7 +28,7 @@ import {
 } from "@provablehq/sdk";
 import * as receipt from "./transitions/token_for_new_coin";
 
-export class TokenContract extends BaseContract {
+export class Token_for_new_coinContract extends BaseContract {
 
   constructor(config: Partial < ContractConfig > = {
     mode: ExecutionMode.LeoRun

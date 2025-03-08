@@ -1,7 +1,6 @@
 {
-  "program": "token_for_new_coin.aleo",
-  "version": "0.1.0",
-  "description": "",
-  "license": "MIT",
-  "dependencies": null
+    "program": "token_for_new_coin.aleo",
+    "version": "0.0.0",
+    "description": "",
+    "license": "MIT"
 }
