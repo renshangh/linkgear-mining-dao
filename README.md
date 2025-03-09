@@ -4,6 +4,8 @@
 
 DokoJS is a powerful and lightweight library designed for seamless interaction with the Aleo blockchain and its diverse ecosystem. Drawing inspiration from the [zk-gaming-toolkit](https://github.com/kryha/zk-gaming-toolkit), dokojs fully harnesses existing tools while offering a user-friendly interface for developers keen on building atop the Aleo blockchain.
 
+This is an ALEO contract building tool
+
 ## Installation
 
 Before beginning, make sure you have the following set up:
