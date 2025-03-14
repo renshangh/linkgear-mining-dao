@@ -78,6 +78,7 @@ The timeline remains aligned with "Phase 1: Bootstrapping on Aleo Testnet (Q2 20
   2. **Weeks 3-4: Smart Contract Development (April 15 - April 28)**  (this falls into the START Grant Phase)
      - Build zk-SNARK voting and Aleo reward simulation contracts (mock PoSW outputs).
      - Team: Blockchain devs use snarkOS/snarkVM.
+      - Deliver to START grant reviewers.
   3. **Weeks 5-6: UI Prototyping & Integration (April 29 - May 12)**  
      - Prototype dashboard (voting, rewards, staking) with Visily, export to React/TypeScript, and connect to testnet contracts.
      - Team: Ren Shan handles front-end integration.
@@ -86,11 +87,6 @@ The timeline remains aligned with "Phase 1: Bootstrapping on Aleo Testnet (Q2 20
      - Refine based on feedback.
   5. **Weeks 9-10: Finalization & Snapshot (May 27 - June 15)**  
      - Finalize MVP, snapshot activity for airdrops, and prepare grant demo.
-     - Deliver to START grant reviewers.
-
-- **Assumptions**:
-  - Team of 2 (e.g., 1 Aleo devs, 1 full-stack).
-  - Aleo testnet is stable (post-mainnet September 2024).
-  - START grant funds (~$50k) cover dev time and minimal costs.
+    
 
 ---
