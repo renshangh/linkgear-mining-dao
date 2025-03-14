@@ -89,10 +89,8 @@ The user flow will focus on Aleo mining governance and reward simulation via a t
      - Deliver to START grant reviewers.
 
 - **Assumptions**:
-  - Team of 3-4 (e.g., 2 Aleo devs, 1 full-stack, 1 tester).
+  - Team of 2 (e.g., 1 Aleo devs, 1 full-stack).
   - Aleo testnet is stable (post-mainnet September 2024).
   - START grant funds (~$50k) cover dev time and minimal costs.
-
-- **Why 10 Weeks?**: Focusing on Aleo simplifies the simulator and contracts, shaving ~2 weeks off the original 12-week estimate. Visily’s free tier speeds UI development, and your team’s Aleo expertise ensures efficiency.
-
+  
 ---
