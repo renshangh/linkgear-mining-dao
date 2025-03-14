@@ -75,7 +75,7 @@ The user flow will focus on Aleo mining governance and reward simulation via a t
   1. **Weeks 1-2: Planning & Setup (April 1 - April 14)**  
      - Define MVP scope (Aleo-only), set prover criteria, and prepare Aleo testnet.
      - Team: Aleo developers initialize environment.
-  2. **Weeks 3-4: Smart Contract Development (April 15 - April 28)**  
+  2. **Weeks 3-4: Smart Contract Development (April 15 - April 28)**  (this falls into the START Grant Phase)
      - Build zk-SNARK voting and Aleo reward simulation contracts (mock PoSW outputs).
      - Team: Blockchain devs use snarkOS/snarkVM.
   3. **Weeks 5-6: UI Prototyping & Integration (April 29 - May 12)**  
@@ -92,5 +92,5 @@ The user flow will focus on Aleo mining governance and reward simulation via a t
   - Team of 2 (e.g., 1 Aleo devs, 1 full-stack).
   - Aleo testnet is stable (post-mainnet September 2024).
   - START grant funds (~$50k) cover dev time and minimal costs.
-  
+
 ---
