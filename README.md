@@ -16,7 +16,7 @@ The Minimum Viable Product (MVP) for the Mining DAO during the START grant phase
   2. take votes, 
   3. track daily rewards,
   4. record feedbacks,
-  5. districute rewards.
+  5. distribute rewards.
 
 - **Why This MVP?**: It proves the concept of a privacy-first Aleo mining DAO governed by tALEO holders, leveraging Aleo’s zero-knowledge tech and Aleo Vote-based’s governance model (will be extended into the tALEO specs). It’s minimal yet validates the DAO’s core value proposition for the START grant phase.
 
