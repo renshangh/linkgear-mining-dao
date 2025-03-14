@@ -6,16 +6,16 @@ The phase 1 of MVP will focus solely on Aleo mining, excluding BTC, Doge, and ot
 
 ---
 
-### 1. Describe MVP: the minimum viable product we intend to build in phase 1 including very START grant phase
+### 1. Describe MVP: the minimum viable product we intend to build in phase 1 including the very START grant phase
 The Minimum Viable Product (MVP) for the Mining DAO during the START grant phase will be a testnet-deployed prototype of a decentralized Aleo mining DAO, focusing on governance and reward simulation using Aleo’s blockchain. This aligns with our "Phase 1: Bootstrapping on Aleo Testnet (Q2 2025)" roadmap, emphasizing Aleo-only mining.
 
 - **Components**:
   - **Governance Contracts**: Smart contracts on Aleo testnet enabling private voting (via zk-SNARKs) for selecting Aleo miners/provers and allocating mock rewards.
   - **Aleo Mining Simulator**: A system simulating Aleo PoSW mining outputs, tracking "proof efficiency" contributions from testnet participants (e.g., mock provers or using DxPool mining data as a whole).
-  - **User Interface**: A basic dashboard (prototyped with Cordia AI ) showing voting options, simulated Aleo rewards, and participant stats. 
-  - **Testnet tALEO Token**: A placeholder token for staking and governance, with snapshots for future airdrop eligibility on mainnet.
+  - **User Interface**: A basic dashboard (prototyped with Cordia AI ) showing voting options, simulated Aleo rewards, and participant stats. (right after the START phase)
+  - **Testnet tALEO Token**: A placeholder token for staking and governance, with snapshots for future airdrop eligibility on mainnet.(following the START phase)
 
-- **Scope**: The MVP focuses exclusively on Aleo mining, testing governance and reward mechanics in a risk-free testnet environment without real hardware or multi-coin complexity. The START grant phase will focus on Aleo DAO smart contrats building on Aleo Testnet, namely, 
+- **Scope**: In nutshell, the START grant phase will focus on Aleo DAO smart contrats building on Aleo Testnet, namely, 
   1. create proposal, 
   2. take votes, 
   3. track daily rewards,
