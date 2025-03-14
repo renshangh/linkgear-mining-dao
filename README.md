@@ -34,7 +34,7 @@ The MVP will offer two key functionalities for users—testnet participants such
      - Users stake testnet tALEO tokens to vote on mock Aleo miner/prover selection (e.g., approving a prover with high proof efficiency) and reward splits (e.g., 50% miners, 20% stakers, 30% treasury).
      - Uses Aleo’s zk-SNARKs for private, secure voting.
   2. **Simulated Aleo Reward Tracking**:
-     - Users view mock Aleo mining rewards (e.g., 10 ALEO daily) based on simulated prover contributions, with a dashboard showing their share as stakers or "miners."
+     - Users view mock Aleo mining rewards (e.g., 100 ALEO daily) based on simulated prover contributions, with a dashboard showing their share as stakers or "miners."
      - Tracks activity for future tALEO airdrops.
 
 - **Problem Solved**:
