@@ -57,7 +57,7 @@ The user flow will focus on Aleo mining governance and reward simulation via a t
   3. **Step 3: Vote on Prover Selection**
      - In the “Governance” tab, Sam reviews mock prover proposals (e.g., Prover A: 100 proofs/day, Prover B: 50 proofs/day). He votes privately for Prover A using zk-SNARKs.
   4. **Step 4: Check Simulated Rewards**
-     - Sam checks the “Rewards” dashboard, seeing simulated Aleo output (e.g., 10 ALEO daily total). As a staker, he’s credited 20% (e.g., 2 ALEO).
+     - Sam checks the “Rewards” dashboard, seeing simulated Aleo output (e.g., 10 ALEO daily total). As a staker, he’s credited 20% (e.g., 2 ALEO out of 10 ALEO) of tALEO. Note: he gets tALEO as tALEO is the community token in this Mining DAO.
   5. **Step 5: Provide Feedback**
      - Sam submits feedback via a form (e.g., “Show proof efficiency metrics”), earning extra testnet tALEO.
   6. **Step 6: Snapshot Confirmation**
