@@ -68,7 +68,7 @@ The user flow will focus on Aleo mining governance and reward simulation via a t
 ---
 
 ### 4. Expected Timeline: What is the estimated time to complete the MVP?
-The timeline remains aligned with "Phase 1: Bootstrapping on Aleo Testnet (Q2 2025)"—April to June 2025—but is slightly streamlined since we’re focusing only on Aleo mining, reducing multi-coin complexity. Assuming the START grant phase begins in April 2025 and leverages your team (e.g., Linkgear Foundation’s Aleo devs and Ren Shan), here’s the revised estimate:
+The timeline remains aligned with "Phase 1: Bootstrapping on Aleo Testnet (Q2 2025)"—April to June 2025—but is slightly streamlined since we’re focusing only on Aleo mining, reducing multi-coin complexity. Assuming the START grant phase begins in April 2025 and here’s the estimate:
 
 - **Total Duration**: ~10 weeks (2.5 months), from April 1, 2025, to June 15, 2025.
 - **Breakdown**:
