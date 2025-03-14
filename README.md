@@ -6,7 +6,7 @@ The phase 1 of MVP will focus solely on Aleo mining, excluding BTC, Doge, and ot
 
 ---
 
-### 1. Describe MVP: the minimum viable product we intend to build during the START grant phase
+### 1. Describe MVP: the minimum viable product we intend to build in phase 1 including very START grant phase
 The Minimum Viable Product (MVP) for the Mining DAO during the START grant phase will be a testnet-deployed prototype of a decentralized Aleo mining DAO, focusing on governance and reward simulation using Aleo’s blockchain. This aligns with our "Phase 1: Bootstrapping on Aleo Testnet (Q2 2025)" roadmap, emphasizing Aleo-only mining.
 
 - **Components**:
