@@ -1,4 +1,5 @@
 **Mission:** Oversee a decentralized, privacy-first mining organization that mines multiple cryptocurrencies (ALEO, BTC, Doge), governed by tALEO token holders who select miners, allocate funds, and distribute rewards transparently using Aleo’s zero-knowledge technology and Lido’s scalable framework.
+
 **Audience:** It enables smaller investments growing together for decisions, purchasing, hosting and rewards distritrution in ALEO mining efforts.
 
 The phase 1 of MVP will focus solely on Aleo mining, excluding BTC, Doge, and other coins. This narrows the Mining DAO’s MVP to a privacy-first, Aleo-specific operation leveraging Aleo’s proof-of-succinct-work (PoSW) and zk-SNARKs and governed by tALEO holders. 
