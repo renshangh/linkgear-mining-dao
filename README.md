@@ -11,11 +11,11 @@ The Minimum Viable Product (MVP) for the Mining DAO during the START grant phase
 
 - **Components**:
   - **Governance Contracts**: Smart contracts on Aleo testnet enabling private voting (via zk-SNARKs) for selecting Aleo miners/provers and allocating mock rewards.
-  - **Aleo Mining Simulator**: A system simulating Aleo PoSW mining outputs, tracking "proof efficiency" contributions from testnet participants (e.g., mock provers or using DxPool mining data as a whole).
+  - **Aleo Mining Simulator**: A system simulating Aleo PoSW mining outputs, tracking "proof efficiency" contributions from testnet participants (e.g., mock provers or using DxPool mining data as a whole). The F2pool mining stats crawl has already built https://github.com/renshangh/python_rpi3/blob/main/miningm_stats.py, it needs a minor change for this MVP.
   - **User Interface**: A basic dashboard (prototyped with Cordia AI ) showing voting options, simulated Aleo rewards, and participant stats. (right after the START phase)
   - **Testnet tALEO Token**: A placeholder token for staking and governance, with snapshots for future airdrop eligibility on mainnet.(following the START phase)
 
-- **Scope**: In nutshell, the START grant phase will focus on Aleo DAO smart contrats building on Aleo Testnet, namely, 
+- **Scope**: In nutshell, the START grant phase will focus on Aleo DAO smart contracts building on Aleo Testnet, namely, 
   1. create proposal, 
   2. take votes, 
   3. track daily rewards,
