@@ -1,4 +1,4 @@
-program token_for_new_coin.aleo;
+program linkgear_token.aleo;
 
 record token:
     owner as address.private;

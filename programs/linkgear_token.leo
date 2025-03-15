@@ -1,5 +1,5 @@
 // The `program` scope defines the data types, functions, and state associated with the `token` program.
-program token_for_new_coin.aleo {
+program linkgear_token.aleo {
     // On-chain storage of an `account` map, with `address` as the key,
     // and `u64` as the value.
     mapping account: address => u64;
