@@ -7,13 +7,23 @@ program mining_dao.aleo {
         amount: u64,
     }
 
-    // Proposal details - Governance Participant
+    // Proposal details with rig info - Governance Participant
     struct ProposalInfo {
-        title: field,       // e.g., "Add Doge"
-        content: field,     // Description
-        proposer: address,  // DAO admin/staker
-        deadline: u64,      // Voting deadline
-        type: u8,           // 0=miner, 1=fund, 2=reward, 3=crypto
+        title: field,           // e.g., "Add Doge Rig"
+        content: field,         // Description
+        proposer: address,      // DAO admin/staker
+        deadline: u64,          // Voting deadline
+        type: u8,               // 0=rig_provider, 1=fund, 2=reward, 3=crypto
+        rig_mach: RigMachine,   // Physical machine details
+    }
+
+    // Physical machine info for ROI - Staker, Governance Participant
+    struct RigMachine {
+        power: u64,             // Hash rate (e.g., TH/s)
+        cost_per_day: u64,      // Daily cost estimate (tALEO)
+        exp_coins_3yr: u64,     // Expected coins over 3 years
+        break_even_days: u32,   // Break-even point in days
+        coin: u8,               // 0=BTC, 1=Doge, 2=ALEO, 3=ALPH
     }
 
     // Proposal record - Governance Participant
@@ -23,22 +33,23 @@ program mining_dao.aleo {
         info: ProposalInfo,
     }
 
-    // Miner registration - Miner (Prover)
-    record MinerTicket {
+    // Rig provider registration - Rig Provider (formerly Miner)
+    record RigProviderTkt {
         owner: address,
-        mid: field,         // Miner ID
-        hash_rate: u64,     // Mining power
-        coin: u8,           // 0=BTC, 1=Doge, 2=ALEO, 3=ALPH
+        rid: field,             // Rig provider ID
+        power: u64,             // Total hash rate
+        cost_per_day: u64,      // Daily operational cost
+        coin: u8,               // Supported coin
     }
 
     // Public mappings
-    mapping props: field => ProposalInfo;     // Proposals
+    mapping props: field => ProposalInfo;     // Proposals with rig info
     mapping stakes: address => u64;           // Staked tALEO - Staker
-    mapping miners: field => u64;             // Miner hash rates - Miner
+    mapping rig_provs: field => u64;          // Rig provider hash rates - Rig Provider
     mapping tickets: field => u64;            // Tickets per proposal
     mapping agrees: field => u64;             // Agree votes
     mapping disagrees: field => u64;          // Disagree votes
-    mapping rewards: u8 => u64;               // Rewards per coin - Miner, Staker
+    mapping rewards: u8 => u64;               // Rewards per coin - Rig Provider, Staker
     mapping treasury: address => u64;         // Treasury funds - Infra Provider
 
     // Community Token Creator: Init tALEO
@@ -64,7 +75,7 @@ program mining_dao.aleo {
         Mapping::set(stakes, staker, curr + amt);
     }
 
-    // Governance Participant: Propose vote
+    // Governance Participant: Propose with rig machine info
     async transition propose(pub info: ProposalInfo) -> (Proposal, Future) {
         assert_eq(self.caller, info.proposer);
         let staked: u64 = Mapping::get_or_use(stakes, self.caller, 0u64);
@@ -75,18 +86,18 @@ program mining_dao.aleo {
 
     async function fin_propose(pub id: field) {
         Mapping::set(tickets, id, 0u64);
-        Mapping::set(props, id, ProposalInfo); // Simplified
+        Mapping::set(props, id, ProposalInfo); // Includes rig_mach
     }
 
-    // Miner: Register rig
-    async transition reg_miner(pub hr: u64, pub coin: u8) -> (MinerTicket, Future) {
-        let mid: field = BHP256::hash_to_field(self.caller as field);
-        return (MinerTicket { owner: self.caller, mid, hash_rate: hr, coin }, fin_reg_miner(mid, hr));
+    // Rig Provider: Register with cost estimate
+    async transition reg_rig_prov(pub pwr: u64, pub cost: u64, pub coin: u8) -> (RigProviderTkt, Future) {
+        let rid: field = BHP256::hash_to_field(self.caller as field);
+        return (RigProviderTkt { owner: self.caller, rid, power: pwr, cost_per_day: cost, coin }, fin_reg_rig_prov(rid, pwr));
     }
 
-    async function fin_reg_miner(pub mid: field, pub hr: u64) {
-        let curr: u64 = Mapping::get_or_use(miners, mid, 0u64);
-        Mapping::set(miners, mid, curr + hr);
+    async function fin_reg_rig_prov(pub rid: field, pub pwr: u64) {
+        let curr: u64 = Mapping::get_or_use(rig_provs, rid, 0u64);
+        Mapping::set(rig_provs, rid, curr + pwr);
     }
 
     // Governance Participant: Issue ticket
@@ -136,7 +147,7 @@ program mining_dao.aleo {
         Mapping::set(rewards, coin, curr + total);
     }
 
-    // Getters (all < 32 chars)
+    // Getters
     function get_prop_info(pid: field) -> ProposalInfo {
         return props[pid];
     }
@@ -157,8 +168,8 @@ program mining_dao.aleo {
         return stakes[addr];
     }
 
-    function get_miner_hr(mid: field) -> u64 {
-        return miners[mid];
+    function get_rig_pwr(rid: field) -> u64 {
+        return rig_provs[rid];
     }
 
     function get_rewards(coin: u8) -> u64 {
